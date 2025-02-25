@@ -1,2 +1,3 @@
-idf_component_register(SRCS "esp32s3_onboard_LED.c" "led_strip_encoder.c"
-                       INCLUDE_DIRS ".")
+idf_component_register(SRCS "main.cpp"
+                       INCLUDE_DIRS "."
+                       REQUIRES arduino-esp32 FastLED ESPAsyncWebServer led_strip)

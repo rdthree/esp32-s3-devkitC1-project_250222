@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/ray/.esp-idf-projects/neopixel-test_250222/main
+# Install script for directory: C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/main
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/neopixel-test_250222")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/esp32-s3-devkitc1-project_250222")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

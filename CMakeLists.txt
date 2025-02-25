@@ -3,4 +3,5 @@
 cmake_minimum_required(VERSION 3.16)
 
 include($ENV{IDF_PATH}/tools/cmake/project.cmake)
-project(neopixel-test_250222)
+set(EXTRA_COMPONENT_DIRS $ENV{IDF_PATH}/components)
+project(esp32-s3-devkitc1-project_250222)

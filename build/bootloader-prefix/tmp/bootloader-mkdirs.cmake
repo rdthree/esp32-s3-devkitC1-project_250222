@@ -10,18 +10,18 @@ if(NOT EXISTS "C:/Users/ray/esp/esp-idf-release-v5.3/components/bootloader/subpr
   file(MAKE_DIRECTORY "C:/Users/ray/esp/esp-idf-release-v5.3/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader"
-  "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader-prefix"
-  "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader-prefix/tmp"
-  "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader-prefix/src"
-  "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader"
+  "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader-prefix"
+  "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader-prefix/tmp"
+  "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader-prefix/src"
+  "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()

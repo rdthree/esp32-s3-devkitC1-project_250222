@@ -1,4 +1,4 @@
-/* * Data converted from C:/Users/ray/.esp-idf-projects/neopixel-test_250222/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)
