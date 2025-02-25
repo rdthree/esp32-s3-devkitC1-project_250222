@@ -110,4 +110,6 @@ C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/Fa
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/AsyncTCP/libAsyncTCP.a
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/ESPAsyncWebServer/libESPAsyncWebServer.a
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/main/libmain.a
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED.bak/libFastLED.bak.a
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED_backup_20250225_083001/libFastLED_backup_20250225_083001.a
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/arduino/libarduino.a

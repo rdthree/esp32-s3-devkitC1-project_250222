@@ -704,6 +704,16 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED.bak/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED_backup_20250225_083001/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/arduino/cmake_install.cmake")
 endif()
 

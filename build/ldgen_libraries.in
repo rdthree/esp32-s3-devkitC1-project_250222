@@ -110,4 +110,6 @@ $<TARGET_FILE:__idf_FastLED>
 $<TARGET_FILE:__idf_AsyncTCP>
 $<TARGET_FILE:__idf_ESPAsyncWebServer>
 $<TARGET_FILE:__idf_main>
+$<TARGET_FILE:__idf_FastLED.bak>
+$<TARGET_FILE:__idf_FastLED_backup_20250225_083001>
 $<TARGET_FILE:__idf_arduino>

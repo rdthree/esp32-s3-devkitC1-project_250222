@@ -314,13 +314,13 @@ ENABLE_TESTING:BOOL=
 ESP_PLATFORM:UNINITIALIZED=1
 
 //Value Computed by CMake
-FastLED_BINARY_DIR:STATIC=C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED
+FastLED_BINARY_DIR:STATIC=C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED_backup_20250225_083001
 
 //Value Computed by CMake
 FastLED_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
-FastLED_SOURCE_DIR:STATIC=C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/components/FastLED
+FastLED_SOURCE_DIR:STATIC=C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/components/FastLED_backup_20250225_083001
 
 //Generate the auto-generated files as needed
 GEN_FILES:BOOL=
@@ -557,7 +557,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=148
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=150
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
