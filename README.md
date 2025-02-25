@@ -36,7 +36,9 @@ The solution uses two key components:
 We've created several scripts to help manage FastLED with ESP32-S3:
 
 ### 🛠️ `fastled_esp32s3.ps1`
+
 **Main script** - Compact and streamlined solution that:
+
 - Optionally updates FastLED to the latest version
 - Creates the extension component with all necessary files
 - Patches CMakeLists.txt files
@@ -44,14 +46,18 @@ We've created several scripts to help manage FastLED with ESP32-S3:
 - Ensures proper component dependency linking
 
 ### 🔍 `check_versions.ps1`
+
 **Diagnostic script** - Checks and displays version information for:
+
 - ESP-IDF version
 - FastLED version
 - Verifies ESP32-S3 support in FastLED
 - Checks for RMT driver compatibility
 
 ### 📦 `setup_new_esp32s3_fastled.ps1`
+
 **Complete setup script** - For new projects, this:
+
 - Installs all necessary components (FastLED, ESPAsyncWebServer, AsyncTCP)
 - Creates extension component
 - Generates example template code
@@ -59,7 +65,9 @@ We've created several scripts to help manage FastLED with ESP32-S3:
 - Completely configures the project from scratch
 
 ### 🔄 `update_and_patch_fastled_esp32s3.ps1`
+
 **Full update script** - More verbose version that:
+
 - Updates FastLED while preserving your modifications
 - Creates or updates the extension component
 - Ensures compatibility with ESP32-S3
@@ -67,7 +75,9 @@ We've created several scripts to help manage FastLED with ESP32-S3:
 - Intended for established projects
 
 ### ⚡ `update_fastled.ps1`
+
 **Simple update script** - Just updates FastLED to the latest version:
+
 - Backs up existing FastLED installation
 - Clones the latest version from GitHub
 - Doesn't perform any patching
@@ -75,6 +85,7 @@ We've created several scripts to help manage FastLED with ESP32-S3:
 ## 🖥️ Hardware Compatibility
 
 This solution has been tested and works with:
+
 - ESP32-S3-WROOM-1-DevKitC-1.3 board
 - Built-in onboard WS2812B NeoPixel (GPIO48)
 - Other WS2812/NeoPixel strips/arrays connected to GPIO pins
@@ -82,6 +93,7 @@ This solution has been tested and works with:
 ## 📋 Setup Instructions
 
 ### Prerequisites
+
 - ESP-IDF v5.x installed and configured
 - PowerShell (Windows) or PowerShell Core (Linux/macOS)
 - Git installed and accessible in your PATH
@@ -91,15 +103,18 @@ This solution has been tested and works with:
 1. Create a new ESP-IDF project or navigate to an existing one
 2. Copy the `fastled_esp32s3.ps1` script to your project root
 3. Run the script from PowerShell:
+
    ```powershell
    .\fastled_esp32s3.ps1
    ```
+
 4. Answer the prompts to update FastLED (if desired) and clean build directory
 5. Build your project with `idf.py build`
 
 ### Using in Your Code
 
 1. Include the platform defines at the top of your main.cpp:
+
    ```cpp
    #include "platform_defines.h"
    #include <Arduino.h>
@@ -107,6 +122,7 @@ This solution has been tested and works with:
    ```
 
 2. Configure your LEDs as usual:
+
    ```cpp
    #define LED_PIN 48  // Onboard NeoPixel pin for ESP32-S3-DevKitC-1.3
    #define NUM_LEDS 1
