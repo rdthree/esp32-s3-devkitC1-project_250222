@@ -105,6 +105,7 @@ $<TARGET_FILE:__idf_espressif__qrcode>
 $<TARGET_FILE:__idf_joltwallet__littlefs>
 $<TARGET_FILE:__idf_arduino-esp32>
 $<TARGET_FILE:__idf_espressif__led_strip>
+$<TARGET_FILE:__idf_FastLED-ESP32S3_250224>
 $<TARGET_FILE:__idf_FastLED>
 $<TARGET_FILE:__idf_AsyncTCP>
 $<TARGET_FILE:__idf_ESPAsyncWebServer>

@@ -1008,6 +1008,13 @@ C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/es
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/espressif__led_strip/CMakeFiles/install.dir
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/espressif__led_strip/CMakeFiles/install/local.dir
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/espressif__led_strip/CMakeFiles/install/strip.dir
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED-ESP32S3_250224/CMakeFiles/__idf_FastLED-ESP32S3_250224.dir
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED-ESP32S3_250224/CMakeFiles/edit_cache.dir
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED-ESP32S3_250224/CMakeFiles/rebuild_cache.dir
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED-ESP32S3_250224/CMakeFiles/list_install_components.dir
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED-ESP32S3_250224/CMakeFiles/install.dir
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED-ESP32S3_250224/CMakeFiles/install/local.dir
+C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED-ESP32S3_250224/CMakeFiles/install/strip.dir
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED/CMakeFiles/__idf_FastLED.dir
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED/CMakeFiles/edit_cache.dir
 C:/Users/ray/.esp-idf-projects/esp32-s3-devkitC1-project_250222/build/esp-idf/FastLED/CMakeFiles/rebuild_cache.dir

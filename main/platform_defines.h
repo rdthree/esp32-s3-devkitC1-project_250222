@@ -1,0 +1,19 @@
+#ifndef PLATFORM_DEFINES_H
+#define PLATFORM_DEFINES_H
+
+// ESP32-S3 specific defines
+#define FASTLED_ESP32 1
+#define FASTLED_ESP32_S3 1
+#define FASTLED_NO_AVR 1
+#define FASTLED_DISABLE_INTERRUPTS 0
+#define FASTLED_INTERRUPT_RETRY_COUNT 0
+#define FASTLED_ALLOW_INTERRUPTS 0
+#define FASTLED_FORCE_RMT 1
+#define FASTLED_RMT_BUILTIN_DRIVER 1
+
+// Make sure we're defining ESP32S3
+#ifndef ESP32S3
+#define ESP32S3 1
+#endif
+
+#endif // PLATFORM_DEFINES_H

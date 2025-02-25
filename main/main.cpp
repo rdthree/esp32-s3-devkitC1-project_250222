@@ -1,5 +1,4 @@
-#define FASTLED_DISABLE_RGBW 1
-#define FASTLED_ESP32_S3 1     // Add this to specify ESP32-S3
+#include "platform_defines.h"
 #include <Arduino.h>
 #include <FastLED.h>
 #include <WiFi.h>
@@ -8,7 +7,7 @@
 // ====== CONFIGURE THIS ======
 const char* ssid = "YOUR_WIFI_SSID";
 const char* password = "YOUR_WIFI_PASSWORD";
-#define LED_PIN 48  // Onboard NeoPixel pin (verify this is correct for your specific board)
+#define LED_PIN 48  // Onboard NeoPixel pin
 #define NUM_LEDS 1  // Single NeoPixel
 #define BRIGHTNESS 50  // Set initial brightness (0-255)
 
@@ -32,69 +31,78 @@ void handleColor(AsyncWebServerRequest *request) {
 
 // ====== SETUP ======
 void setup() {
-    initArduino();  // Required when using Arduino inside ESP-IDF
-    
     // Initialize Serial for debugging
     Serial.begin(115200);
+    delay(1000);
     Serial.println("Starting ESP32-S3 NeoPixel Controller");
 
-    // Initialize FastLED with extra debug info
-    Serial.println("Initializing FastLED...");
+    // Initialize FastLED
+    Serial.println("Initializing FastLED using RMT driver...");
     FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
     FastLED.setBrightness(BRIGHTNESS);
     FastLED.clear();
+    FastLED.show();
     
-    // Test pattern - blink red then green then blue
+    // Test pattern - blink R, G, B
+    Serial.println("Starting test pattern...");
+    
+    // Red
     leds[0] = CRGB::Red;
     FastLED.show();
     delay(500);
+    
+    // Green
     leds[0] = CRGB::Green;
     FastLED.show();
     delay(500);
+    
+    // Blue
     leds[0] = CRGB::Blue;
     FastLED.show();
     delay(500);
     
     // Clear LEDs after test
-    FastLED.clear();
+    leds[0] = CRGB::Black;
     FastLED.show();
-    Serial.println("FastLED initialized successfully");
-
-    // Connect to WiFi
-    Serial.print("Connecting to WiFi...");
-    WiFi.begin(ssid, password);
-    int attempts = 0;
-    while (WiFi.status() != WL_CONNECTED && attempts < 20) {
-        delay(500);
-        Serial.print(".");
-        attempts++;
-    }
     
-    if (WiFi.status() == WL_CONNECTED) {
-        Serial.println("\nConnected to WiFi");
-        Serial.print("IP address: ");
-        Serial.println(WiFi.localIP());
+    Serial.println("LED test complete!");
+
+    // Connect to WiFi if credentials are set
+    if (strcmp(ssid, "YOUR_WIFI_SSID") != 0) {
+        Serial.print("Connecting to WiFi...");
+        WiFi.begin(ssid, password);
         
-        // Set up web server
-        server.on("/setColor", HTTP_GET, handleColor);
-        server.begin();
-        Serial.println("HTTP server started");
+        int attempts = 0;
+        while (WiFi.status() != WL_CONNECTED && attempts < 20) {
+            delay(500);
+            Serial.print(".");
+            attempts++;
+        }
+        
+        if (WiFi.status() == WL_CONNECTED) {
+            Serial.println("\nConnected to WiFi");
+            Serial.print("IP address: ");
+            Serial.println(WiFi.localIP());
+            
+            // Set up web server
+            server.on("/setColor", HTTP_GET, handleColor);
+            server.begin();
+            Serial.println("HTTP server started");
+        } else {
+            Serial.println("\nFailed to connect to WiFi");
+        }
     } else {
-        Serial.println("\nFailed to connect to WiFi");
+        Serial.println("WiFi credentials not set - skipping WiFi connection");
     }
 }
 
-// ====== MAIN LOOP (LIGHT SLEEP) ======
+// ====== MAIN LOOP ======
 void loop() {
-    // Keep LED running, disable sleep for debugging
-    delay(5000);
-    
-    /* Uncomment for light sleep mode once everything is working
-    Serial.println("Entering light sleep...");
-    esp_sleep_enable_timer_wakeup(5000000);  // Wake up in 5 sec
-    esp_light_sleep_start();  // Enter low-power mode
-    Serial.println("Waking up...");
-    */
+    // Rainbow effect on the LED
+    static uint8_t hue = 0;
+    leds[0] = CHSV(hue++, 255, 255);
+    FastLED.show();
+    delay(20);
 }
 
 extern "C" void app_main(void) {
